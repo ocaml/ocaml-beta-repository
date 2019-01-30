@@ -1,3 +1,2 @@
-opam-version: 2.0
-upstream: https+git://github.com/ocaml/ocaml-beta-repository
-
+opam-version: "2.0"
+upstream: "https+git://github.com/ocaml/ocaml-beta-repository"
