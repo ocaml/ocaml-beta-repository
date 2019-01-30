@@ -9,7 +9,27 @@ steps:
 - name: build
   image: ocaml/opam2
   commands:
+  - sudo apt-get update && sudo apt-get -y install parallel
   - sudo chown -R opam .
   - git -C /home/opam/opam-repository pull origin && opam update
   - opam repo add beta .
-  - ./build-all-switches
+  - ls packages/ocaml-variants | parallel opam switch create {} {} --repositories=default,beta
+
+---
+kind: pipeline
+name: arm64
+
+platform:
+  os: linux
+  arch: arm64
+
+steps:
+- name: build
+  image: ocaml/opam2
+  commands:
+  - sudo apt-get update && sudo apt-get -y install parallel
+  - sudo chown -R opam .
+  - git -C /home/opam/opam-repository pull origin && opam update
+  - opam repo add beta .
+  - ls packages/ocaml-variants | parallel opam switch create {} {} --repositories=default,beta
+
