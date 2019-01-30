@@ -1,5 +1,7 @@
 # OCaml beta compilers
 
+[![Build Status](https://cloud.drone.io/api/badges/ocaml/ocaml-beta-repository/status.svg)](https://cloud.drone.io/ocaml/ocaml-beta-repository)
+
 This is an [opam](https://opam.ocaml.org) repository that contains beta
 releases of the OCaml compiler. It is in a separate opam remote from the stable
 [opam-repository](https://github.com/ocaml/opam-repository) so that the beta
