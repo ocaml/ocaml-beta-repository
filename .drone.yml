@@ -11,5 +11,5 @@ steps:
   commands:
   - sudo chown -R opam .
   - git -C /home/opam/opam-repository pull origin && opam update
-  - opam repo add .
+  - opam repo add beta .
   - ./build-all-switches
