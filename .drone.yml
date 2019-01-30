@@ -31,5 +31,5 @@ steps:
   - sudo chown -R opam .
   - git -C /home/opam/opam-repository pull origin && opam update
   - opam repo add beta .
-  - ls packages/ocaml-variants | parallel opam switch create {} {} --repositories=default,beta
+  - ls packages/ocaml-variants | grep -v +fp | parallel opam switch create {} {} --repositories=default,beta
 
