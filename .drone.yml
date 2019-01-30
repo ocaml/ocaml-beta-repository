@@ -1,0 +1,15 @@
+kind: pipeline
+name: amd
+
+platform:
+  os: linux
+  arch: amd64
+
+steps:
+- name: build
+  image: ocaml/opam2
+  commands:
+  - sudo chown -R opam .
+  - git -C /home/opam/opam-repository pull origin && opam update
+  - opam repo add .
+  - ./build-all-switches

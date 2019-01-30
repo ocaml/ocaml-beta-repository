@@ -1,0 +1,7 @@
+#!/bin/sh -ex
+
+PKGS=`ls packages/ocaml-variants/`
+
+for p in ${PKGS}; do
+  opam switch create $p $p --repositories=default,beta
+done
