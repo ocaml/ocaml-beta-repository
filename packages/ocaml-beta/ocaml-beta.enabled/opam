@@ -1,0 +1,14 @@
+opam-version: "2.0"
+maintainer: "platform@lists.ocaml.org"
+bug-reports: "https://github.com/ocaml/ocaml/issues"
+authors: [
+  "Xavier Leroy"
+  "Damien Doligez"
+  "Alain Frisch"
+  "Jacques Garrigue"
+  "Didier Rémy"
+  "Jérôme Vouillon"
+]
+homepage: "https://ocaml.org"
+synopsis: "OCaml beta releases enabled"
+description: "Virtual package enabling the installation of OCaml beta releases."
